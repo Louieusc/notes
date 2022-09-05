@@ -101,12 +101,12 @@ In sudo status,
 10. CHANGE PASSWORD FOR USER OF LINUX:
 $ passwd
 Then prompt will ask old password, input it and then input a new password in 8 characters.
-(Linux user p/w:ly735280)
+(Linux user p/w: n/a)
 
 
 11. CHANGE PASSWORD FOR ROOT OF LINUX CENTOS:
  #sudo passwd root
-(Linux root p/w: cd)
+(Linux root p/w: n/a)
 
 
 13. DEFAULT MYSQL PASSWORD
