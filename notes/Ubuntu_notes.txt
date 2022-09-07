@@ -19,3 +19,7 @@ $sudo apt-get install mysql-server
 
 3. Install other apps
 $sudo apt install xxx
+
+4. What if a flash drive is working in Ubuntu but not recognized by Windows?
+
+Linux formats usb drive as EXT4. For both linux and windows use, fat32 is the only universal format style. 
