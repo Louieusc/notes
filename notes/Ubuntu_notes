@@ -1,0 +1,21 @@
+
+1. Install apps error
+
+When new install Ubuntu done, if install new software with command $sudo apt-get install...
+The system will get error as below:
+E: Unable to locate package git
+
+Now, need to update linux:
+$sudo apt update
+
+Then, you can install the new apps.
+
+
+
+2. HOW TO INSTALL MYSQL FROM UBUNTU?
+
+$sudo apt-get install mysql-server
+
+
+3. Install other apps
+$sudo apt install xxx

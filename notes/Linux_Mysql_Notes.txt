@@ -1,0 +1,96 @@
+LOG INFO ON mysql in Linux 7
+ID: louie P/W: ly528
+ID: will  p/w: 123
+
+
+
+
+Enter SUDO root account: $ su root
+
+Log out user in Linux: ctrl+D    (For all users: root, sudo, mysql...)
+
+
+
+
+1. HOW TO EDIT THE FILE my.cnf:
+
+#nano /etc/my.cnf       (my.cnf is readonly file, only nano can edit it)
+
+in [mysqld], add below:
+skip-grant-tables   (block password prompt temporary)
+
+ctrl+o save it. ctrl+x exit.
+
+Once everything done, you need to restore my.cnf, delete new contents.
+
+
+2. HOW TO RESTART/START/STOP/STATUS MYSQL:
+
+#sudo systemctl restart mysqld
+
+#sudo systemctl start mysqld   (This starts mysql)
+
+#sudo systemctl stop mysqld    (This stop mysql)
+
+#sudo systemctl status mysqld  (This check the status of mysql)
+
+
+
+
+
+3. HOW TO INSTALL MYSQL IN LINUX:
+Requre: 1.CentOS 7 with GUI Gnome 2.Sudo account 3.Terminal window 4.Yum
+
+a. Download Yum: dev.mysql.com/download/repo/yum/
+b. Download mysql with wget command: #sudo wget https://dev.mysql.com/get/mysql80-community-release-e17-7.noarch.rpm
+c. Add software repo: #sudo md5sum mysql80-community-release-e17-7.noarch.rpm
+d. Update the repo: #sudo rpm -ivh mysql80-community-release-e17-7.noarch.rpm
+e. Install mysql: #sudo yum install mysql-server
+f. Start mysql: #sudo systemctl start mysqld
+(Tips: Mysql will auto-start at Linux starup)
+
+
+
+
+
+4. How to remove mysql in Linux:
+
+#sudo yum remove mysql mysql-server
+
+
+
+
+5.Mysql password policy:
+Medium: password should be 8  characters long with a number, mixed case and special characters
+    LOW Length >= 8 characters.
+    MEDIUM Length >= 8, numeric, mixed case, and special characters.
+    STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
+
+6.How to setup an easy password for mysql in Linux:
+
+a. mysql> SHOW VARIABLES LIKE 'validate_password%';
+
+You'll find the policy is Medium. So change it to low.
+
+b. Setup to low password:
+mysql> SET GLOBAL validate_password.policy=LOW;
+
+c. mysql>create user 'user_name'@'localhost' identified by 'new_password';
+
+
+
+
+
+7. How to setup a super easy password(like 123) for mysql:
+a. mysql> UNINSTALL COMPONENT "file://component_validate_password";  (This blocks the passord policy)
+b. mysql> create user 'user_name'@'localhost' identified by '123';   (This make a new user with new pw 123)
+c. mysql> INSTALL COMPONENT "file://component_validate_password";    (Reinstall the password policy, the level will be return Medium) 
+
+
+
+
+
+
+
+
+
