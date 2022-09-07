@@ -1,0 +1,54 @@
+﻿SH4 Control keys
+
+F3: Navigation map
+F4: Attack periscope
+F5: Bridge
+F6: Deck gun
+F7: AA gun
+F8: Sonar
+F9: Redar
+F10:Sub management
+F11:Camera
+
+W: Cycle tube
+L: lock
+J: Deploy decoys
+Z: Rig silent running (Click z again to cancel)
+M: Message
+N: Ship mannual
+-: All stop
+1: Ahead 1/3
+3: Ahead standard
+4: Ahead full
+5: Ahead flank
+6: Back 1/3
+9: Back emergency
+
+[: Hard to port (Keep left turn) 
+]: Hard to starboard (Keep right turn)
+': Rudder amidships (Keep rudder 0°[Stop turning])
+
+S: Surface
+E: Emergency surface
+D: Dive
+C: Crash dive
+P: Pariscope depth
+
++: Increase time (小键盘)
+-: Decrease time (小键盘)
+
+Pg up: Raise attack periscope (crl+ raise to top)
+Pg dn: Lower attack periscope (crl+ lower to bottom)
+INS:   Raise observation periscope (crl+ raise to top)
+DEL:   Lower observation periscope (crl+ lower to bottom)
+
+Crl+F11: Screenshot
+
+
+
+
+
+
+
+
+
