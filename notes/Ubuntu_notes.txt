@@ -22,4 +22,5 @@ $sudo apt install xxx
 
 4. What if a flash drive is working in Ubuntu but not recognized by Windows?
 
-Linux formats usb drive as EXT4. For both linux and windows use, fat32 is the only universal format style. 
+Linux formats usb drive as EXT4, EXT3 or EXT2. For both linux and windows use, fat32 is the only universal format style. 
+(ps. Windows use NTFS for usb drive)
