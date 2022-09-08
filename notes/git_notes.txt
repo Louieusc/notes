@@ -16,6 +16,7 @@ GIT官网www.git-csm.com可下载最新GIT
   B. 用命令$ git add 新文本名，将此文本存入暂存区（Staged）
   C. $ git commit -m "简要说明此次动作内容"，为此次动作加注解
   D. 用dir或ls命令，可查看当前目录是否已有该文件
+  (ps. If some new add files got similar commits, might commit only once after adding them.)
 
 
 4.在已有文本中进行更改、添加
