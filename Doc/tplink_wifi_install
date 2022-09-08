@@ -1,0 +1,26 @@
+
+TPLINK WIFI ADAPTOR NAME
+Bus 001 Device 007: ID 2357:011e TP-Link AC600 wireless Realtek RTL8811AU [Archer T2U Nano]
+
+
+
+HOW to install TP-Link AC600 Archer T2U Nano on Ubuntu?
+
+1. $ sudo apt install dkms git build-essential libelf-dev linux-headers-$(uname -r)
+
+2. $ git clone https://github.com/aircrack-ng/rtl8812au.git
+
+3. $ cd rtl8812au/
+
+4. $ sudo make dkms_install
+
+Then, if you find some infomation appears on buttom:
+8812au, 5.6.4.2_35491.20191025, 5.11.15-1-default, x86_64: installed
+
+This means wireless adaptor installed successfully.
+
+
+
+
+把桌面语言改为中文，才能使用中文输入法。
+
