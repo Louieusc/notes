@@ -199,6 +199,7 @@ GIT官网www.git-csm.com可下载最新GIT
     (注：.gitignore本质是一个plain text文件)
     (如果忽略成功，目录中即使新加入了该类型文件且在目录中可见，但运行$ git status后系统也会提示工作树clean，无文件需提交。
      如果例外成功，该文件被加入目录后，$ git status后系统将提示有文件需提交)
+     (P.S. For re-edit .gitignore file, you may use $ nano .gitignore without sudo account)
 
 
 23. 配置别名Alias
@@ -219,6 +220,13 @@ GIT官网www.git-csm.com可下载最新GIT
 
     (注：如果不能Push至远程库，则Tools->Options->General: in SSH client configuration set the SSH Client to OpenSSH, 
     select your id_dsa for SSH Key. 即可解决push问题。)
+    
+    
+    
+25. ABOUT RM COMMAND:
+   a. For removing a file with a spaceful title, use:
+     $ git rm 'xxx xxx xx"
+     
 
 
 
