@@ -1,6 +1,5 @@
 LOG INFO ON mysql in Linux 7
-ID: louie P/W: ly528
-ID: will  p/w: 123
+P/W: Ly735280@
 
 
 
@@ -66,22 +65,25 @@ Medium: password should be 8  characters long with a number, mixed case and spec
     MEDIUM Length >= 8, numeric, mixed case, and special characters.
     STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
 
-6.How to setup an easy password for mysql in Linux:
 
-a. mysql> SHOW VARIABLES LIKE 'validate_password%';
-
-You'll find the policy is Medium. So change it to low.
-
-b. Setup to low password:
-mysql> SET GLOBAL validate_password.policy=LOW;
-
-c. mysql>create user 'user_name'@'localhost' identified by 'new_password';
-
-
-
+6. HOW TO SETUP REGULAR PASSWORD FOR MYSQL
+ a. $ sudo mysql_secure_installation
+ b. Input new password (8 letters with digits, 1 uppercase, 1 spectial character)
+ c. $ sodu mysql (will ask password, input "ly")
+ d. mysql>ALTER USER 'root'@'localhost'
+        ->IDENTIFIED WITH mysql_native_password BY 'new_password';
+        
+ e. FLUSH PRIVILEGES;
+ f. Exit mysql and log in again with $mysql -u root -p. Now, you can log in mysql with new     
+    password.
 
 
-7. How to setup a super easy password(like 123) for mysql:
+7. HOW TO INSTALL MYSQL WORKBENCH?
+ Install mysql first and then:
+$ sudo snap install mysql-workbench-community
+
+
+8. How to setup a super easy password(like 123) for mysql:
 a. mysql> UNINSTALL COMPONENT "file://component_validate_password";  (This blocks the passord policy)
 b. mysql> create user 'user_name'@'localhost' identified by '123';   (This make a new user with new pw 123)
 c. mysql> INSTALL COMPONENT "file://component_validate_password";    (Reinstall the password policy, the level will be return Medium) 
