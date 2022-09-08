@@ -25,6 +25,7 @@ B. cmd以Administrator运行，会自动到c:\windows\system32\下，然后进�
  J. 退出mysql：EXIT;
    (注：创建的数据库文件位于C:\ProgramData\MySQL\MySQL Server 8.0\data中，扩展名为.ibd。但ProgramData是隐藏目录，需在
    窗口的View中设置为可观看隐藏文件)
+   (注：如果在列名后不加NOT NULL，该字段默认值为NULL）
  
 K. 创建新库新表另一方法：
     a. 建立一个.sql文件，将相关语句写入，存在任何位置都可
@@ -142,6 +143,7 @@ K. 创建新库新表另一方法：
 10. 修改表格结构
    A. 删除某表内的某一列：ALTER TABLE <table name> DROP COLUMN <column name>;
    B. 增加一列：ALTER TABLE <table name> ADD COLUMN <new column name> 数据类型 NOT NULL;
+      在某列之后增加一列：ALTER TABLE <table name> ADD <column name> <数据类型> AFTER column name; 
    C. 改某列名：ALTER TABLE <table name> CHANGE COLUMN <old column name new colomn name> 数据类型 NOT NULL;
       (注：VARCHAR(10)表示可有10个字符的字符串变量)
       (注：新增一列后该列数据为空值，如需在列中填入数据，只能用UPDATE命令而非INSERT)
@@ -195,8 +197,113 @@ K. 创建新库新表另一方法：
 
 
 
+16. 创建新表可用以下语句
+
+CREATE TABLE credit 
+(id BIGINT NOT NULL AUTO_INCREMENT, 
+type varchar(20), 
+circle INT, 
+cr_amount INT, 
+PRIMARY KEY(id) );
 
 
+
+17. 创建临时表用以下语句
+
+CREATE TEMPORARY TABLE credit 
+(id BIGINT NOT NULL AUTO_INCREMENT, 
+type varchar(20), 
+circle INT, 
+cr_amount INT, 
+PRIMARY KEY(id) );
+
+注：临时表可用任何命令，但SHOW TABLES不会显示，且退出MYSQL后再进入也无法再找到
+
+
+
+18. 快速复制某旧表（包含结构与数据）为另一新表
+    CREATE TABLE <new table name> SELECT * FROM <old table name>;
+
+
+19. 快速复制与某旧表结构相同的新表（无内容）
+a. 显示某表结构： SHOW CREATE TABLE <table name> \G;
+显示如下：
+CREATE TABLE `mission` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `type` varchar(20) NOT NULL,
+  `date` varchar(8) NOT NULL,
+  `circle` int NOT NULL,
+  `amount` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+b. 拷贝以上语句并执行之，即可复制相同结构的新表
+
+
+
+20. 用UNIQUE <column_name>，可防止某列输入重复信息
+  例如在创建新表时，
+CREATE TABLE students
+(
+   first_name CHAR(20) NOT NULL,
+   last_name CHAR(20) NOT NULL,
+   sex CHAR(10),
+   UNIQUE (last_name, first_name)
+);
+
+
+21. 统计并显示重复数据
+先确定可能出现重复的字段，如circle and amount。然后用以下语句：
+
+mysql> SELECT COUNT(*) as repetitions, circle, amount
+    -> FROM mission
+    -> GROUP BY circle, amount
+    -> HAVING repetitions > 1;
+
+22.
+SELECT VERSION( );	查看服务器版本信息
+SELECT DATABASE( );	查看当前数据库名 (如果先前并未选择数据库，则返回NULL)
+SELECT USER( ):   	查看当前用户名
+
+
+
+23. 如何屏蔽secure-file-priv
+导出MYSQL数据时，可能会出现running secure-file-priv，不能导出。此时需屏蔽secure-file-priv
+
+a. In sudo status, nano /etc/my.cnf and insert secure-file-priv = "" under [mysqld]
+b. restart mysqld
+c. mysql>SHOW VARIABLES LIKE 'secure_file_priv';
+
+如果其值显示为空，即成功。可进行导出数据。
+
+
+24. 导出数据
+
+mysql> SELECT * FROM <table_name> INTO OUTFILE '/tmp/<file_name.txt>';
+数据即被导出形成TXT文件存于/tmp/中。
+
+
+
+
+25. 导出表
+可将整个表格导出，以TXT方式存在某目录下
+$ mysqldump -u root -p <database name> <table name> > /tmp/xxx.txt
+然后会提示输入密码，输入即可
+
+
+26. 要导出整个数据库的所有表格数据，可使用以下命令：
+$ mysqldump -u root -p <database name> > /tmp/xxx.txt
+
+
+
+
+
+26. 设置文件的可读可写属性
+LINUX中，某文件可能被禁止读写，可修改其读写属性
+例如文件存在TMP下，
+In sudo status, # chmod +rwx /tmp/<file name>       增加可读可写可执行属性
+                # chmod -rwx /tmp/<file name>       删除可读可写可执行属性
+                # chmod -w /tmp/<filename>          删除可写属性(只可读和执行)
 
 
 
