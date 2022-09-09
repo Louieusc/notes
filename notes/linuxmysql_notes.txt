@@ -89,6 +89,13 @@ b. mysql> create user 'user_name'@'localhost' identified by '123';   (This make 
 c. mysql> INSTALL COMPONENT "file://component_validate_password";    (Reinstall the password policy, the level will be return Medium) 
 
 
+9. 设置文件的可读可写属性
+LINUX中，某文件可能被禁止读写，可修改其读写属性
+例如文件存在TMP下，
+In sudo status, # chmod +rwx /tmp/<file name>       增加可读可写可执行属性
+                # chmod -rwx /tmp/<file name>       删除可读可写可执行属性
+                # chmod -w /tmp/<filename>          删除可写属性(只可读和执行)
+
 
 
 
