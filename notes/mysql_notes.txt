@@ -286,24 +286,17 @@ mysql> SELECT * FROM <table_name> INTO OUTFILE '/tmp/<file_name.txt>';
 
 
 25. 导出表
-可将整个表格导出，以TXT方式存在某目录下
-$ mysqldump -u root -p <database name> <table name> > /tmp/xxx.txt
+可将整个表格导出，以TXT方式存在某目录下，从根目录下执行命令：
+$ mysqldump -u root -p <database name> <table name> > <dump_name>.txt;
 然后会提示输入密码，输入即可
 
 
 26. 要导出整个数据库的所有表格数据，可使用以下命令：
-$ mysqldump -u root -p <database name> > /tmp/xxx.txt
+$ mysqldump -u root -p <database name> > <dump_name>.txt;
 
 
 
 
-
-26. 设置文件的可读可写属性
-LINUX中，某文件可能被禁止读写，可修改其读写属性
-例如文件存在TMP下，
-In sudo status, # chmod +rwx /tmp/<file name>       增加可读可写可执行属性
-                # chmod -rwx /tmp/<file name>       删除可读可写可执行属性
-                # chmod -w /tmp/<filename>          删除可写属性(只可读和执行)
 
 
 
