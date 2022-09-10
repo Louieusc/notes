@@ -1,0 +1,8 @@
+
+BEFORE SHUTDOWN OR REBOOT LINUX, MUST APPLY sync COMMAND to write data in memory into hard drive
+$ sync
+
+1. SHUT DOWN LINUX: $ shutdown
+2. SHUT DOWN LINUX IN 10 MIN: $ shutdown -h +10
+3. REBOOT LINUX: $ reboot
+4. PAUSE SYSTEM AND KEEP POWER ON: $ holt

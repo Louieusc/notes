@@ -25,6 +25,8 @@ GIT官网www.git-csm.com可下载最新GIT
   C. 命令git diff，可查看修改详情
   D. 命令git add及git commit将修改内容加入库中，并注释
   E. 再运行命令git status查看状态，系统说当前无需要提交之修改，且工作树是干净的
+  F. 如需一次提交多个文件，可用：$ git add <file-1> <file-2> <file-3>...    且多个文件提交后只需commit一次
+
   （注：仅在对文本刚进行更改之后，使用git diff命令才有效）
    (注：Git为大小写敏感，编辑时务必注意文件名的大小写)
 
