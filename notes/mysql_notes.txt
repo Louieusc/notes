@@ -261,9 +261,9 @@ mysql> SELECT COUNT(*) as repetitions, circle, amount
     -> HAVING repetitions > 1;
 
 22.
-SELECT VERSION( );	查看服务器版本信息
-SELECT DATABASE( );	查看当前数据库名 (如果先前并未选择数据库，则返回NULL)
-SELECT USER( ):   	查看当前用户名
+SELECT VERSION();	查看服务器版本信息
+SELECT DATABASE();	查看当前数据库名 (如果先前并未选择数据库，则返回NULL)
+SELECT USER():   	查看当前用户名
 
 
 
