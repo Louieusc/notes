@@ -294,11 +294,20 @@ $ mysqldump -u root -p <database name> <table name> > <dump_name>.txt;
 26. 要导出整个数据库的所有表格数据，可使用以下命令：
 $ mysqldump -u root -p <database_name>  > dump_name.txt
 
-27. IMPORT THE DATABASE WITH the DUMP FILE:
+27. 用DUMP文件导入数据库:
  a. Creative the database first
  b. $ mysql -u root -p <database_name> < dump_name.txt 
  
  Then, the all tables and data will be imported into the database shortly.
+ 
+28. 用.SQL文件导入数据库:
+ a. 用VS code建立一个.sql文件，或将dump.txt另存为.sql格式
+ b. $ mysql -u root -p database_name < dump.sql
+ 
+ 
+29. 用拷贝dump.txt内容将数据导入某表
+ a. Copy dump.txt中INSERT INTO相关内容
+ b. 直接在mysql> 下执行
 
 
 
