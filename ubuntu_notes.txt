@@ -38,8 +38,6 @@ Linux formats usb drive as EXT4, EXT3 or EXT2. For both linux and windows use, f
 A. $sudo apt update
 B. $sudo apt install ibus-table-wubi
 
-（注：只能把UBUNTU桌面语言改为中文，才能使用中文输入法）
-
 
 
 
