@@ -38,7 +38,7 @@ Linux formats usb drive as EXT4, EXT3 or EXT2. For both linux and windows use, f
 A. $sudo apt update
 B. $sudo apt install ibus-table-wubi
 
-
+7.
 
 
 
