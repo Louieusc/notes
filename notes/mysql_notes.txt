@@ -308,7 +308,21 @@ $ mysqldump -u root -p <database_name>  > dump_name.txt
 29. 用拷贝dump.txt内容将数据导入某表
  a. Copy dump.txt中INSERT INTO相关内容
  b. 直接在mysql> 下执行
-
+ 
+ 
+ 
+30. 显示当前时间戳：SELECT CURRENT_TIMESTAMP;
+         显示当前日期： SELECT CURRENT_DATE;
+         显示当前时间： SELECT CURRENT_TIME;
+         显示当前年代及第几周： SELECT YEARWEEK("20XX-XX-XX");
+         
+         
+31. SELECT x/y;          X除以Y，结果取小数点后4位
+    SELECT x DIV y;      X除以Y，结果只取整数（商）
+    SELECT x MOD y;      X除以Y后的余数
+    
+32. <>: 不等于
+    !=: 不等于
 
 
 
