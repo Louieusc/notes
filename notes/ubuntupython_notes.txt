@@ -1,0 +1,60 @@
+PYTHON 3
+
+
+1. 安装后的PYTHON在UBUNTU LINUX哪个位置？
+  /usr/bin/python3
+  
+  
+2. 如何运行一个PY文件？
+   a. 进入到该文件所在目录后，运行$ python3 <file name.py>
+   b. 或在VS Code中打开该文件，选择在terminal运行
+   
+   
+3. BULL data includes False and True
+
+4. or运算即或运算，只要其中有一个True，or运算结果就是True
+
+5. \是转义字符，用于将该字符转义为原始义（非PYTHON义），如\'表示此时的引号'不再具PYTHON中表示字符串功能，而是显示引号自身。
+   \n: 表示换行
+   \\: 表示\自己
+   
+   
+6. 如果要传输的文本包含大量英文字符，用UTF-8编码能节省空间
+
+7. '中文'.encode('utf-8') ：将中文二字编码为byte码
+   b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf8') ：将byte码解码
+   
+   
+8. How to make 'python' program command execute Python3?
+a. Find ~/.bashrc file:
+b. Open the file and place 'alias python=python3' into it.
+c. Run command '$ source ~/.bashrc'
+
+Now, you can run python xx.py instead of python3 xx.py.
+
+
+9. %s表示用字符串替换，%d表示用整数替换, %f表示用浮点数替换，%x表示用十六进制数替换
+    如果不确定应该用什么，%s永远起作用，它会把任何数据类型转换为字符串
+    如果%是一个普通字符，用%%表示一个%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
