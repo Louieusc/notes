@@ -40,7 +40,8 @@ K. 创建新库新表另一方法：
  C. 显示某数据库带条件信息：SELECT * FROM <table name> WHERE <条件表达式>;
  D. 如果条件不只一个：SELECT * FROM <table name> WHERE <条件表达式> AND <条件表达式>;
    (注：如果条件表达式中有字符串，需用''或""围住)
-   (注：有时候日期也可能设为字符串类型，需用引号) 
+   (注：日期本有自身专属的date数字类型，输出格式为yyyy-mm-dd。但输入时可简化输入yymmdd或yyyymmdd)
+   (注：日期也可能设为字符串类型，需用引号) 
    (注：条件表达式一般形式为<column name> + <条件>，如果用AND语句，AND前后都要有column name，即使相同列名也不能省略
         例如：SELECT * FROM service WHERE date <= '08/15/22' AND date >='08/01/22'; 表示显示从八月初到八月中之间的所有service信息）
 
