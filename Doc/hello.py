@@ -34,3 +34,6 @@ ord('中')
 b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf8')
 len('abcdefg')
 len('中文算')
+
+print('%2d-%02d' % (3, 1))
+print('%.2f' % 3.1415926)
