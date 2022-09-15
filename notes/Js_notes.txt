@@ -1,0 +1,109 @@
+Javascript
+
+1. How to install javascript on ubuntu?
+  On ubuntu, just install nodejs.
+  a. $sudo apt update
+  b. $sudo apt install nodejs
+  c. $sudo node -v
+  
+  
+2. How to run and test .js file?
+  a. Make a new .html file with VS Code
+  b. Place .js code or give a .js link in the .html
+  c. Run the .html file in Chrome browser
+  
+  
+3. Ctrl+Shift+i: Open developer console in Chrome browser
+    调试JS语句都可在Console中进行，如同terminal
+
+4. JavaScript的语法每个语句以 ; 结束，语句块用{...}
+   JS在HTML文件的Head或Body内，在<script>...</script>之间
+
+5. // 或 /*...*/ 表示注释     JS是大小写敏感的
+
+6. INT, Float, 正负数在JS中统一都用NUMBER表示，NN表示Not a Number无数字结果, Infinity表示无穷大
+   +, -, *, / 可作加减乘除, %求余运算(remainder)，&&是与运算，||是或运算，!是非运算
+   =表示赋值，===表示等值
+   +=，-=，*=，/=，%= 表示前后值运算后的结果
+   
+   
+7. JS的关键字(保留字，不可用于变量的命名)：
+var 	声明一个变量
+let 	声明一个变量块
+const 	声明一个内容块
+if 	Marks a block of statements to be executed on a condition
+switch 	Marks a block of statements to be executed in different cases
+for 	Marks a block of statements to be executed in a loop
+function 申明一个函数
+return 	退出函数
+try 	Implements error handling to a block of statements
+
+
+
+   
+8. 各种变量：
+   a. Array(数组)是一种变量类型，用[]表示，元素间用 , 分隔
+             创建Array也可通过Array()函数实现
+   b. Object（对象）是另一种变量，由键＋值组成，键是字符串，值可以是任意数据类型。
+             要获取一个对象的属性，用<object_name>.<property_name>;
+   c. JS用var来声明变量，另用let, const也可。还可在一行中声明多个变量：
+            如 var person = "John Doe", carName = "Volvo", price = 200;
+             
+             
+9. JavaScript中，用 = 对变量进行赋值，同一变量可反复赋不同值，但var语句只能用一次
+      
+      
+10. 显示变量内容可使用console.log()； 相比alert(), 它的好处是避免弹出对话框
+   例如：
+   > var x = 10;
+   > console.log(x);
+      显示结果为10
+     
+   > var x =10;
+   >alert(x);
+      显示结果为弹窗的10
+      
+      
+11. \ 表示转义，例如要将“显示出来，就在它前加上反斜杠，成为\"
+
+12. 对于提行的文字，可实时在需提行处提行并在全句前后加上｀｀括起来
+
+13. 为便于阅读，最好在 operators(= + - * /)前后都加上空格，且每行代码不要超过80个characters，
+        如果必须提行，就在一个运算符后回车提行 
+
+14. JavaScript并无打印页面功能，但可设置一个按钮并调用WINDOWS的打印语句window.print()：
+    <button onclick="window.print()">Print this page</button>
+    
+    
+    
+15. Hyphen（连字符-）在JS中只作减号，不能用于变量命名。但 underscore(_)可用于命名
+    JS一般用lower camel case来命名，即次关键词首字母大写，如：firstName, lastName
+      
+      
+16. 如果一个变量名已经声明，但并未赋值，JS会自动给它一个undefined的值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

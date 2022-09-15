@@ -3,6 +3,10 @@
 #from tkinter import N
 
 
+from cmath import e
+from tkinter import E
+
+
 print ('hello, world!')
 a = 123 # a是整数
 print(a)
@@ -37,3 +41,31 @@ len('中文算')
 
 print('%2d-%02d' % (3, 1))
 print('%.2f' % 3.1415926)
+
+y = {"type": "apple", "size": "large"}
+print (type(y))
+
+x = 1e2
+print (type(x))
+
+x = 1.5
+a = int (x)
+print (a)
+
+import random
+print (random.randrange(0, 100))
+
+x = "Hello, world!"
+print (len(x))
+
+x = "The best things in life are free!"
+print("c" in x)
+
+x = "The best things in life are free!"
+print("c" not in x)
+
+x = "The best things in life are free!"
+if "b" in x:
+    print('Great!')
+else:
+    print('Ah-oh!')
