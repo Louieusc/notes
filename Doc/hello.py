@@ -69,3 +69,28 @@ if "b" in x:
     print('Great!')
 else:
     print('Ah-oh!')
+
+a = "Hello, World!"
+print(a.upper())
+
+a = "    Hello, World!"
+print(a.strip())
+
+a = "Hello, World!"
+print(a.replace("Hello", "Hi"))
+
+a = "Hello, World, is, the, best!"
+print(a.split(","))
+
+a = "Hello"
+b = "World"
+c = a + ' ' + b
+print(c)
+
+age = 30
+txt = "My name is John, I am {}" 
+print(txt.format(age))
+
+age = '30'
+txt = "My name is John, I am " + age
+print(txt)
