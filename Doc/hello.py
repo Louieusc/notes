@@ -94,3 +94,30 @@ print(txt.format(age))
 age = '30'
 txt = "My name is John, I am " + age
 print(txt)
+
+quantity = 3
+itemno = 567
+price = 49.99
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+x = "Hi,this is a best world louie!"
+print(x.count("i"))
+
+x = "Hello, world!"
+print(x.swapcase())
+
+x = "Hello, louie!"
+print(x.title())
+
+print(10<9)
+
+x = 10
+y = 90
+if x>y:
+    print('x is greater than y')
+else:
+    print('x is less than y')
+
+bool()
+
