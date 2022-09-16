@@ -126,7 +126,7 @@ None Type: 	NoneType
        a = "Hello, World!"
        print(len(a))
        
-15. If...in 及 If...else
+15. If...in 及 If...else (条件判断)
         要查看某变量是否含有某内容，用If...in，如:
         x = "The best things in life"
         if "b" in x:
@@ -137,7 +137,7 @@ None Type: 	NoneType
         if "b" not in x:
             print('Great!')  
             
-          如有后续动作需在查看后做出，用if...else，如：
+          如有后续动作需在查看后做出，用if...else，如:
           x = "The best things in life"
 	  if "b" in x:
     		print('Great!')
@@ -153,6 +153,33 @@ None Type: 	NoneType
        将输出llo三个字符
    （注：如果索引由零开始，可省略0，如print(b[:15])。如果到末尾止，也可省略数字，如print([12:])）
    
+   
+17. upper() 和 lower()用于输出变量全为大写或小写，如:
+	x = "Hello, World!"
+	print(x.upper())
+	
+	
+18. replace()用于替换变量的字节，如:
+	x = "Hello, World!"
+	print(x.replace("Hello", "Hi"))	
+	
+19. split()用于将字串按分隔符分隔成list，如：
+	a = "Hello, World, is, the, best!"
+	print(a.split(","))               #['Hello', ' World', ' is', ' the', ' best!']
+	
+	
+20. 合并字串可以用＋号，中间如需增加空白必须用" "方式，如:
+	a = "Hello"
+	b = "World"
+	c = a + ' ' + b
+	print(c)
+	
+21. 设置变量时，只可将相同类型数据进行合并，如需合并不同类数据，必须用format()将不同类型的数据格式化，如：
+	age = 30
+	txt = "My name is Michale, I am {}"
+	print(txt.format(age))           #My name is Michale, I am 30
+	
+    (注：或者将30改为字串变量"30"，也可达到相同输出) 
 
    
 
