@@ -126,3 +126,16 @@ thelist = ['pear', 'apple', 'cherry']
 #print(len(thelist))
 #print(type(thelist))
 print(thelist[0])
+
+thelist = ["apple", "banana", "cherry"]
+thelist.insert(2, "watermelon")
+print(thelist)
+
+thelist = ["apple", "banana", "cherry"]
+thedict = {"kiwi": "panama", "orange": "taiwan"}
+thelist.extend(thedict)
+print(thelist)
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)

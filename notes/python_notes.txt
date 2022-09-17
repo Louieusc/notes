@@ -256,14 +256,86 @@ None Type: 	NoneType
     Set无序、不可变(但可加减)、不可索引、不允许重复值
     dict有序、可变、不能有重复值
     
-    List:
+    LIST:
     a. list由[ ]方括号包围，具备有序性、可变性，且值可重复
     b. 用len()函数可查询list内的item个数
     c. item可以是任何数据类型，如字符串、数字、布尔值等
     d. 用list()也可创建新list，如thelist = list(("apple", "pear", "cherry"))  它等同于list = ['apple', 'pear', 'cherry']
     e. 可指定index number来输出特定列表值，如：
     	thelist = ["apple", "banana", "cherry"]
-	print(thelist[1])         #注:索引值由0开始。也可用负数反向索引，末尾从-1开始
+	print(thelist[1])         # 索引值由0开始。也可用负数反向索引，末尾从-1开始
+    f. 也可指定range范围，如：
+	    thelist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+	    print(thelist[2:5])   # 将输出cherry, orange, kiwi。末尾的5melon不在内
+	    
+	    thelist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+	    print(thelist[-4:-1])  #输出orange, kiwi, melon。末尾的-1mango不在内
+	    
+    g. 修改list内的值，需用到索引数：
+    	thelist = ["apple", "banana", "cherry"]
+	thelist[2] = "currant"
+	print(thelist)    # 输出["apple", "banana", "currant"]
+	
+	thelist = ["apple", "banana", "cherry"]
+	thelist[1:2] = ["currant", "watermelon"]
+	print(thelist)     #输出["apple", "currant", "watermelon", "cherry"] 用两个水果名替换了一个水果名，其后的水果位置顺延
+	
+     h. 插入值到list，用insert():
+     	thelist = ["apple", "banana", "cherry"]
+	thelist.insert(1, "watermelon")
+	print(thelist)     #输出["apple", "watermelon", "banana", "cherry"] 必须指定插入位置，其他原值不变只改变位置。如不指定插入位置将报error
+	
+     i. 加值到list，用append():
+     	thelist = ["apple", "banana", "cherry"]
+	thelist.append("orange")
+	print(thelist)    #加入后，新值将位于list末尾。加值无须指定位置
+	
+     j. 用extend()，可将其他list的值延请至本list中：
+	thislist = ["apple", "banana", "cherry"]
+	tropical = ["mango", "pineapple", "papaya"]
+	thislist.extend(tropical)
+	print(thislist) 
+     
+     注：不能用extend方式加入其他list，但可加入其他tuple, set, dict
+    	thelist = ["apple", "banana", "cherry"]
+	thetuple = ("kiwi", "orange")
+	thelist.extend(thetuple)
+	print(thelist)
+	
+	k. 删除list内的值，用remove()；但要删除指定索引位置的值，需用pop()
+	thislist = ["apple", "banana", "cherry"]
+	thislist.remove("banana")
+	print(thislist)
+	
+	thislist = ["apple", "banana", "cherry"]
+	thislist.pop(1)
+	print(thislist)     #如未指定索引数即pop()，将删除最后那个值。
+	
+	l. 用clear()可清空list内容，但保留list。用del <list_name>可删除list
+	thislist = ["apple", "banana", "cherry"]
+	thislist.clear()
+	print(thislist)      #输入为[]
+	
+	
+     
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     Tuple:
     a. tuple由圆括号包围
