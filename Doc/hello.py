@@ -121,3 +121,8 @@ else:
 
 bool()
 
+thelist = ['pear', 'apple', 'cherry']
+#print(thelist)
+#print(len(thelist))
+#print(type(thelist))
+print(thelist[0])
