@@ -139,3 +139,11 @@ print(thelist)
 thislist = ["apple", "banana", "cherry"]
 thislist.pop(1)
 print(thislist)
+
+thelist = ["apple", "banana", "cherry"]
+for y in thelist:
+  print(y) 
+
+thislist = [12, 63, 34, 182, 100]
+thislist.sort(reverse = True)
+print(thislist) 

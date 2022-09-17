@@ -315,7 +315,30 @@ None Type: 	NoneType
 	thislist = ["apple", "banana", "cherry"]
 	thislist.clear()
 	print(thislist)      #输入为[]
-	
+
+ 	m. 采用loop(循环)的方式，可将list的值逐一显示出来。
+ 	   一、for...in循环，即for <loop_name> in <list_name>
+ 	   thelist = ["apple", "banana", "cherry"]
+	   for x in thelist:
+ 	     print(x)          # 就是把list中每个item代入变量x，然后执行缩进处的命令
+ 	     
+ 	     
+ 	 n. 给list中的元素排序，用sort()。可按数字大小排序，也可按字母先后排序
+ 	 thislist = [100, 50, 65, 82, 23]
+	 thislist.sort()
+	 print(thislist)  ＃输出为[23, 50, 65, 82, 100]
+	   
+	 thislist = ["orange", "mango", "kiwi", "pineapple"]
+	 thislist.sort()
+	 print(thislist)  输出为["kiwi", "mango", "orange", "pineaplle"]
+	   
+	 (注：如需降序，即由大到小、由后到先排列，需加reverse = True)
+	 thislist = [12, 63, 34, 182, 100]
+	 thislist.sort(reverse = True)
+	 print(thislist)    #输出为[182, 100, 63, 34, 12]
+	   
+	   
+ 	   	
 	
      
 	
