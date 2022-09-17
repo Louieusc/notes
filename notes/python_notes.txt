@@ -14,9 +14,12 @@ PYTHON 3
 
 4. or运算即或运算，只要其中有一个True，or运算结果就是True
 
-5. \是转义字符，用于将该字符转义为原始义（非PYTHON义），如\'表示此时的引号'不再具PYTHON中表示字符串功能，而是显示引号自身。
-   \n: 表示换行
-   \\: 表示\自己
+5. \是转义字符(Escape Character)，用于将该字符转为原始义（非PYTHON义），如\'表示此时的引号'不再具PYTHON中表示字符串功能，而是显示引号自身。
+   \n: 换行
+   \\: \
+   \r: 回车
+   \t: Tab
+   
    
    
 6. 如果要传输的文本包含大量英文字符，用UTF-8编码能节省空间
@@ -156,7 +159,7 @@ None Type: 	NoneType
    
 17. upper() 和 lower()用于输出变量全为大写或小写，如:
 	x = "Hello, World!"
-	print(x.upper())
+	print(x.upper())          
 	
 	
 18. replace()用于替换变量的字节，如:
@@ -174,16 +177,104 @@ None Type: 	NoneType
 	c = a + ' ' + b
 	print(c)
 	
-21. 设置变量时，只可将相同类型数据进行合并，如需合并不同类数据，必须用format()将不同类型的数据格式化，如：
+21. 设置变量时只能将相同类型数据进行合并，对于不同类数据，必须用format()将其格式化，如：
 	age = 30
 	txt = "My name is Michale, I am {}"
 	print(txt.format(age))           #My name is Michale, I am 30
 	
-    (注：或者将30改为字串变量"30"，也可达到相同输出) 
+    (注：另外一个办法是将30改为字符串类型"30"，也可得到相同输出) 
+    
+22. 对于多个变量的合并，也可一次性格式化。如：
+	quantity = 3
+	itemno = 512
+	price = 49.99
+	myorder = "I want {} pieces of item {} for {} dollars."
+	print(myorder.format(quantity, itemno, price))
+	
+23. Python的Methods（类函数）：
+	
+	capitalize()	字符串的首字母转换为大写
+	center()	居中
+	count()		返回某值在字符串中出现的次数
+	encode()	将字符串编码
+	find()	        搜索字串中的某值并返回发现位置	
+	index()	        搜索字串中的某值并返回发现位置
+	format()	格式化字串
+	isalnum()	如字串都为数字则返回TRUE	
+	isdecimal()	如字串都带小数点则返回TRUE		
+	islower()	如字串都为小写则返回TRUE	
+	isspace()	如字串都为白空格则返回TRUE	
+	isupper()	如字串都为大写则返回TRUE
+	join()	        在字串结尾插入一个可迭代的元素	
+	lower()		将字串转换为小写	
+	partition()	在字串分离处返回一个元组(tuple)
+	replace()	将字串替换为特定的值	
+	split()		用分隔符切分字串并返回一个清单
+	strip()		返回切割后的字串
+	swapcase()	字串大小写互相切换
+	title()		将每个词的首字母转换为大写
+	translate()	返回翻译后的字符串
+	upper()		字串转换为大写
+	
+  （注：使用以上Methods时，之前需加变量名及.标记。如：x.upper()。如需对整个变量进行处理，括号就留空；
+  如需对字串中特定字符进行处理，则将特定值填入括号。如：x.find("i")）
+  
+  
+24. 布尔值可直接通过Print来显示True或False结果，如：print(10>5)，将显示True
+    另外，也可用一段语句来表示True或false的结果，如：
+    x = 10
+    y = 9
+    if x>y:
+    print('x is greater than y')
+    else:
+    print('x is less than y')
+	
+  (注：任何有内容的字符串、数字、ist, tuple, sets的布尔值都为True。任何零及空值都为False)
+  
+  
+25. Python的运算符可用于数学运算、赋值运算、比较运算、逻辑运算、ID运算、归属运算(Membership)、位运算
 
+	A. 数学运算符中，/ 为除运算，结果可有小数点。//为除运算，结果只为整数(Floor division)
+           ** 为求幂
+   
+	B. 赋值运算符中，＝号表示所赋之值而非数学运算。运算符后跟＝号，表示运算后的结果。如：
+	   +=, /=,     *=。5+=2，即为5+2=?
+	c. 比较运算符中，==表示值相同，!=表示值不同，>=表示大于或等于，任一个满足即返回True
+	d. 逻辑运算符有 and:二者皆为真，则返回True；否则返回False
+	               or:只要其一为真，则返回True
+	               not:反转，如结果为真，则返回False；如结果为假，返回True
+	e. ID运算符有     is:  如二者相同，返回True
+	               is not: 如二者不同，返回True
+	f. 归属(Membership)运算符有        in: 如某值在序列中，则返回True
+				      not in: 如某值不在序列中，则返回True
+	g. 位运算符用于二进制的比较运算: &, |, ^(XOR), ~(NOT)
+	
+
+26. 四种内置集合数据类型： list, tuple, set, dict
+    list具备有序性、可变性、值可重复
+    tuple有序、不可变、允许重复值
+    Set无序、不可变(但可加减)、不可索引、不允许重复值
+    dict有序、可变、不能有重复值
+    
+    List:
+    a. list由[ ]方括号包围，具备有序性、可变性，且值可重复
+    b. 用len()函数可查询list内的item个数
+    c. item可以是任何数据类型，如字符串、数字、布尔值等
+    d. 用list()也可创建新list，如thelist = list(("apple", "pear", "cherry"))  它等同于list = ['apple', 'pear', 'cherry']
+    e. 可指定index number来输出特定列表值，如：
+    	thelist = ["apple", "banana", "cherry"]
+	print(thelist[1])         #注:索引值由0开始。也可用负数反向索引，末尾从-1开始
+    
+    Tuple:
+    a. tuple由圆括号包围
+    
+    
+
+
+	
    
 
-
+  
 
 
 
