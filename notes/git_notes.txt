@@ -232,7 +232,7 @@ GIT官网www.git-csm.com可下载最新GIT
      
      
      
-26. Visual Studio Code中，左方Sidebar有一提交功能键。点击后输入commit内容，可完成当前所有提交和注释
+26. Visual Studio Code中，左方Sidebar有一提交功能键。点击后输入commit内容，可完成当前所有提交和注释.
      
 
 
