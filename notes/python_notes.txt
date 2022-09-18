@@ -367,7 +367,34 @@ None Type: 	NoneType
  
     
     27. Tuple:
-        a. tuple由圆括号包围，和list最相似，但不具可变性（即不可加减、替换、插入）
+        a. tuple由圆括号包围，和list最相似，但不具可变性（不可加减、替换、插入）
+        b. 如果tuple中只有一个值，后需加逗号,，如thetuple = ("apple",)
+        c. 同一tuple中可以放不同类型的数据，如tuple1 = ("abc", 34, True, "male")
+        d. 查看任何数组（Collection）的数据类型，都可以用type()，如：
+        	mytuple = ("apple", "banana", "cherry")
+		print(type(mytuple))      #输出为<class 'tuple'>
+		
+		mylist = ("apple", "banana", "cherry")
+		print(type(mylist))       #输出为<class 'list'>
+		
+	e. 如要查看tuple中是否有某值，可用if...in
+		thistuple = ("apple", "banana", "cherry")
+		if "apple" in thistuple:
+ 		print("Yes, 'apple' is in the tuple")
+ 		
+ 	f. 虽然tuple不可变，但将之改为list就能进行替换、增删，之后再改回tuple类型即可
+ 		x = ("apple", "banana", "cherry")
+		y = list(x)
+		y[1] = "kiwi"
+		x = tuple(y)
+   		print(x) 
+   		
+   	g. Tuple也可增加新值，将新值设为一个仅有一值的tuple，再将两个tuple用 + 合并即可
+ 	  	x = ("apple", "banana", "cherry")
+		y = ("orange",)
+		thetuple = x + y
+		print(thetuple)
+		
         
     
     
