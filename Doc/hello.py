@@ -173,3 +173,12 @@ print(len(thistuple))
 
 thistuple = ("apple",)
 print(thistuple)
+
+mytuple = ("apple", 30, True, "cherry")
+print(type(mytuple))
+
+
+x = ("apple", "banana", "cherry")
+y = ("orange",)
+thetuple = x + y
+print(thetuple)
