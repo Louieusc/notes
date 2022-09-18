@@ -147,3 +147,22 @@ for y in thelist:
 thislist = [12, 63, 34, 182, 100]
 thislist.sort(reverse = True)
 print(thislist) 
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = [0.2, 4.8, 5.5]
+list4 = list1 + list2 + list3
+print(list4)
+print(len(list4))
+
+thislist = ["apple", "banana", "cherry"]
+x = thislist.count("apple")
+print(x)
+
+thislist = ["apple", "banana", "cherry"]
+x = len(thislist)
+print(x)
