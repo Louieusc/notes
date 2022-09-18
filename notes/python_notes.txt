@@ -364,33 +364,11 @@ None Type: 	NoneType
 	reverse() Reverses the order of the list
 	sort()	Sorts the list
 	 
-	 
-	   
-	   
- 	   	
-	
-     
-	
+ 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    Tuple:
-    a. tuple由圆括号包围
+    27. Tuple:
+        a. tuple由圆括号包围，和list最相似，但不具可变性（即不可加减、替换、插入）
+        
     
     
 

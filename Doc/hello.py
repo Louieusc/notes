@@ -166,3 +166,10 @@ print(x)
 thislist = ["apple", "banana", "cherry"]
 x = len(thislist)
 print(x)
+
+thistuple = ("apple", "banana", "cherry", "apple")
+print(thistuple)
+print(len(thistuple))
+
+thistuple = ("apple",)
+print(thistuple)
