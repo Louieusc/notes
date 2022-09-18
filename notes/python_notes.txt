@@ -258,7 +258,7 @@ None Type: 	NoneType
     
     LIST:
     a. list由[ ]方括号包围，具备有序性、可变性，且值可重复
-    b. 用len()函数可查询list内的item个数
+    b. 用len()函数可查询list内的item个数 
     c. item可以是任何数据类型，如字符串、数字、布尔值等
     d. 用list()也可创建新list，如thelist = list(("apple", "pear", "cherry"))  它等同于list = ['apple', 'pear', 'cherry']
     e. 可指定index number来输出特定列表值，如：
@@ -336,6 +336,35 @@ None Type: 	NoneType
 	 thislist = [12, 63, 34, 182, 100]
 	 thislist.sort(reverse = True)
 	 print(thislist)    #输出为[182, 100, 63, 34, 12]
+	 
+	 (注：如无视升降序，只把list原序颠倒，用reverse()命令)
+	 
+	 o. 用copy()可复制一个list; 用 + 号可合并多个list。
+	 
+	 p. count()可查询某值在list中出现的次数：
+	 thislist = ["apple", "banana", "cherry"]
+	 x = thislist.count("apple")
+	 print(x)                        #输出为1
+	 
+	 q. index()可查询某值在list中的索引值是多少：
+	 thelist = ['apple', 'banana', 'cherry']
+	 x = thelist.index('cherry')      #输出为2
+	 
+  LIST内置Methods大全：
+        
+	append() Adds an element at the end of the list
+	clear()	Removes all the elements from the list
+	copy()	Returns a copy of the list
+	count()	Returns the number of elements with the specified value
+	extend() Add the elements of a list (or any iterable), to the end of the current list
+	index()	Returns the index of the first element with the specified value
+	insert() Adds an element at the specified position
+	pop()	Removes the element at the specified position
+	remove() Removes the first item with the specified value
+	reverse() Reverses the order of the list
+	sort()	Sorts the list
+	 
+	 
 	   
 	   
  	   	
