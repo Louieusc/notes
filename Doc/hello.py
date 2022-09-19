@@ -227,3 +227,35 @@ x = {"apple", "banana", "cherry"}
 y = {"google", "apple", "facebook"}
 z = x.isdisjoint(y)
 print(z) 
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+#print(thisdict["model"])
+x = thisdict.get("brand")
+print(x)
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+x = car.items()
+print(x)
+
+car = {
+	"brand": "Ford",
+	"model": "Mustang",
+	"year": 1964
+	}
+car["year"] = 2022
+
+car = {
+	"brand": "Ford",
+	"model": "Mustang",
+	"year": 1964
+	}
+car["color"] = "blue"
+print(car)

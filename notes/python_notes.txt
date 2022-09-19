@@ -458,8 +458,43 @@ None Type: 	NoneType
 	  "model": "Mustang",
 	  "year": 1964
 	}
-	print(thisdict["brand"])
+	print(thisdict["brand"])     #输出为Ford
 	
+	b. 用get()也可得到某键值
+	x = thisdict.get("brand")
+	print(x)                      #输出为Ford
+	c. 用keys()可得到该Dict中所有键名，但无键值
+	d. 用values()可得Dict中所有键值列表
+	car = {
+	"brand": "Ford",
+	"model": "Mustang",
+	"year": 1964
+	}
+	x = car.values()
+	print(x)
+	e. 用items()可得到Dict中所有成对的键名及键值
+	x = car.items()
+	print(x)
+	
+	f. 用if...in可查询某key是否存在于Dict中
+	g. 要改变键值，用<dict_name>["key_name"] = new value
+	car = {
+	"brand": "Ford",
+	"model": "Mustang",
+	"year": 1964
+	}
+	car["year"] = 2022
+	(如：用update()也能改变键值，但新值必须是成对的Dict，如{"year": 2022})
+	
+	h. 𣷹加键是通过加入新的键名并赋键值的方式，即用<dict_name>["new key_name"] = new value
+	car = {
+	"brand": "Ford",
+	"model": "Mustang",
+	"year": 1964
+	}
+	car["color"] = blue
+	print(car)      #输出为{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'blue'}
+	(如：用update()也能𣷹加键值，但新值必须是成对的Dict，如{"year": 2022})
         
 
 
