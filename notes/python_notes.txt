@@ -451,6 +451,15 @@ None Type: 	NoneType
 	z = x.isdisjoint(y)
 	print(z)                 #如果无重复，将输出True
 	
+    29. Dict以大括号包围，元素以key: value的方式成对出现。它有序、可改变、不能重复(不能出现相同键值)
+        a. Dict可以key name（键名）为参数进行查询
+        thisdict ={
+	  "brand": "Ford",
+	  "model": "Mustang",
+	  "year": 1964
+	}
+	print(thisdict["brand"])
+	
         
 
 
