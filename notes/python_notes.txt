@@ -395,8 +395,20 @@ None Type: 	NoneType
 		thetuple = x + y
 		print(thetuple)
 		
-	h. 
+	h. Tuple的解包（unpacking），即将tuple内的元素分解到变量中，元素的数量需与变量数相等
+	fruits = ("apple", "banana", "cherry")
+	(green, yellow, red) = fruits
+	print(green)
+	print(yellow)
+	print(red)           #输出结果为apple banana cherry
 		
+	(注：如果变量数少于tuple的元素数，可在其中一变量名前加*, 输出时未加*的变量将自动与自身位置
+	相同的元素对应，加*的变量会与剩余位置的元素对应并形成一个list)
+	fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+	(green, yellow, *red) = fruits
+	print(green)
+	print(yellow)
+	print(red)           #输出结果为apple banana ['cherry', 'strawberry', 'rasberry']
         
     
     
