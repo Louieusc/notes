@@ -259,3 +259,33 @@ car = {
 	}
 car["color"] = "blue"
 print(car)
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+family = {
+  "child1" : {
+    "name" : "Vivian",
+    "year" : 2003
+  },
+  "child2" : {
+    "name" : "Will",
+    "year" : 2012
+  },
+}
+print(family)
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("color", "Black")
+
+print(x) 

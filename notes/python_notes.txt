@@ -495,6 +495,15 @@ None Type: 	NoneType
 	car["color"] = blue
 	print(car)      #输出为{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'blue'}
 	(如：用update()也能𣷹加键值，但新值必须是成对的Dict，如{"year": 2022})
+	
+	i. 用pop()并指定键名，可删除键名及键值一对   
+	       另用del <dict_name>["key_name"]也可删除，用del <dict_name>可删除整个Dict
+	       用clear()可清空dict
+	j. 用copy()可复制Dict，即newdict = thedict.copy()，或newdict = dict(thedict)
+	
+	k. 一个Dict可以包含另一个Dict，称为nested dictionaries（词典筑巢）
+	
+	
         
 
 
