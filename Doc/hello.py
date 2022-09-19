@@ -194,3 +194,36 @@ fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
 print(green)
 print(yellow)
 print(red)
+
+thisset = {"apple", "banana", "cherry"}
+thisset.add('pear')
+print(thisset) 
+
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+  print(x)
+
+thisset = {"apple", "banana", "cherry"}
+fruits = {"pineapple", "mango", "papaya"}
+thisset.update(fruits)
+print(thisset)
+
+set1 = {1, 2, 3}
+set2 = {'a', 'b', 'c'}
+set3 = set1.union(set2)
+print(set3)
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "tesla", "apple"}
+z = x.intersection(y)
+print(z) 
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x) 
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "apple", "facebook"}
+z = x.isdisjoint(y)
+print(z) 

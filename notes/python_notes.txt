@@ -271,7 +271,7 @@ None Type: 	NoneType
 	    thelist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 	    print(thelist[-4:-1])  #输出orange, kiwi, melon。末尾的-1mango不在内
 	    
-    g. 修改list内的值，需用到索引数：
+    g. 替换修改list内的值，需用到索引数：
     	thelist = ["apple", "banana", "cherry"]
 	thelist[2] = "currant"
 	print(thelist)    # 输出["apple", "banana", "currant"]
@@ -409,9 +409,49 @@ None Type: 	NoneType
 	print(green)
 	print(yellow)
 	print(red)           #输出结果为apple banana ['cherry', 'strawberry', 'rasberry']
+	
+	h. 多个Tuple可以用加号 + 相加。Tuple之间甚至可以相乘，用*，从而达到重复元素的效果
+	fruits = ("apple", "banana", "cherry")
+	mytuple = fruits * 2
+	print(mytuple)        #输出结果为("apple", "banana", "cherry", "apple", "banana", "cherry")
         
     
-    
+    28. Set
+        Set用大括号{ }包裹，具有不可排序、不可索引、不可重复、不可改变的特性，但可增加、删除元素
+        a. Set的无序性表现在每次运行时，元素不一定在原来的顺序位置，故不能使用索引参数
+        b. len(), type()可用于查询Set的元素数目和数据类型
+        c. 用for...in可loop显示Set的元素，用...in可查询某元素是否在Set中
+        thisset = {"apple", "banana", "cherry"}
+	print("banana" in thisset)               #输出结果为True
+	d. 可使用add()，增加Set的元素，但加入的新元素位置不固定（不一定在末尾）
+	e. 多个Set的元素相加，可用update()，也可用union()。且加入的数据可以是任意迭加式（iterable）对象如list, tuple等。但union()方式必须预设一个新set，而update只需在原有Set上升级
+	thisset = {"apple", "banana", "cherry"}
+	mylist = ["kiwi", "orange"]
+	thisset.update(mylist)
+	print(thisset)            #输出结果仍在原thisset内
+	
+	set1 = {1, 2, 3}
+	set2 = {'a', 'b', 'c'}
+	set3 = set1.union(set2)
+	print(set3)               #输出结果在新建Set3内
+	
+	f. 用remove()或discard()可删除元素
+	g. 用clear可清空Set的内容但保留Set，用del可删除Set本身
+	h. 用intersection()可将多个Set中的重复元素挑出，形成一个新Set
+	x = {"apple", "banana", "cherry"}
+	y = {"google", "microsoft", "apple"}
+	z = x.intersection(y)
+	print(z) 
+	
+	i. 用对称区别升级symmetric_difference_update()，可只保留未重复元素，剔除重复元素
+	   （注：只要发生了重复，原元素和duplicate元素都会被剔除，无一保留）
+	j. 用isdisjoint()，可检查sets中是否有重复元素
+	x = {"apple", "banana", "cherry"}
+	y = {"google", "microsoft", "facebook"}
+	z = x.isdisjoint(y)
+	print(z)                 #如果无重复，将输出True
+	
+        
 
 
 	
