@@ -501,8 +501,45 @@ None Type: 	NoneType
 	       用clear()可清空dict
 	j. 用copy()可复制Dict，即newdict = thedict.copy()，或newdict = dict(thedict)
 	
-	k. 一个Dict可以包含另一个Dict，称为nested dictionaries（词典筑巢）
+	k. 一个Dict可以包含另一个Dict，称为nested dictionaries（词典嵌套）
 	
+   30. if..., elif..., 及if...else条件表达式
+              条件判断一般用在 >, <, >=, <=, ==, !=的逻辑关系上
+	a. 使用条件时会用到缩进（indentation），通过缩进将输出范围限定在条件之内
+	b. elif是在if条件之外的补充条件，可连续使用多次（二者是平级关系）
+	c. else是之前条件如果都不满足，才执行的后续动作
+例如：	
+	age = 30
+	if age >= 110:
+ 	  print('you\'re a superman')
+	elif age >= 60:
+  	  print('you\'re a senior')
+	elif age >= 18:
+          print('you\'re an adult')   
+	elif age >= 7:
+  	  print('you\'re a teenager')
+	else:
+    	  print('you\'re a kid')
+    	  
+	d. 可用 or 以及 and 来合并条件
+    	  A = 200
+	  B = 33
+	  D = 500
+	  if A > B or A > C:
+  	     print("At least one of the conditions is True")
+  	     
+	e. if还可内置if条件，称为嵌套条件(Nested if)。嵌套条件是原if条件下的补充条件（二者是主从关系）
+	x = 41
+	if x > 10:
+	  print("Above ten,")
+	  if x > 20:                          #此嵌套条件是从属，故需再次缩进
+	    print("and also above 20!")
+	else:
+	    print("but not above 20") 
+	    
+	f. 如果if后并无后续内容，可加入pass一词，系统便不会报错 
+              
+        
 	
         
 

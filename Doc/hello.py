@@ -289,3 +289,34 @@ car = {
 x = car.setdefault("color", "Black")
 
 print(x) 
+
+age = 3
+if age >= 110:
+  print('you\'re a superman')
+
+elif age >= 60:
+  print('you\'re a senior')
+
+elif age >= 18:
+    print('you\'re an adult')
+     
+elif age >= 7:
+    print('you\'re a teenager')
+
+else:
+      print('you\'re a kid')
+
+      
+x = 18
+if x > 10:
+	print("Above ten,")
+	if x > 20:
+	  print("and also above 20!")
+else:
+	  print("but not above 20") 
+
+
+a = 33
+b = 200
+if b > a:
+  pass
